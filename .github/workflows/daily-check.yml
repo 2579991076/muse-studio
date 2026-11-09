@@ -1,0 +1,14 @@
+name: daily-check
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check alive
+        run: |
+          date
+          echo "muse-studio alive"
